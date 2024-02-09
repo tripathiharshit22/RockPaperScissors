@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock, Paper, Scissors Game</title>
+    <link rel="stylesheet" href="css/Rock, Paper, Scissors.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Jost:wght@100&family=Montserrat&family=Palanquin&family=Poppins:wght@300;400;700&family=Quicksand:wght@300;400&family=Ubuntu:wght@300&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <h1>Rock, Paper, Scissors Game</h1>
+    <div class="choices">
+        <div class="choice" id="Rock">
+            <img src="./image/Rock.png" alt="">
+        </div>
+        <div class="choice" id="Paper">
+            <img src="./image/paper.png" alt="">
+        </div>
+        <div class="choice" id="Scissors">
+            <img src="./image/scissors.png" alt="">
+        </div>
+    </div>
+
+    <div class="score-board">
+        <div class="score">
+            <p id="user-score">0</p>
+            <p>You</p>
+        </div>
+        <div class="score">
+            <p id="comp-score">0</p>
+            <p>Comp</p>
+        </div>
+    </div>
+
+    <div class="msg-container">
+        <p id="msg">Play Your Move</p>
+    </div>
+    <button id="reset-btn">Reset Game</button>
+
+</body>
+<script src="js/Rock, Paper, Scissors.js"></script>
+
+</html>
