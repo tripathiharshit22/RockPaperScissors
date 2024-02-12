@@ -28,3 +28,17 @@ const resetGame = () => {
     compScore = 0
 
 }
+const showWinner = (userWin, userChoice, compChoice) => {
+    if (userWin) {
+        userScore++
+        userScoreTxt.innerText = userScore
+        msg.innerText = `You Won! Your ${userChoice} beats ${compChoice}`
+        msg.style.backgroundColor = "#358600"
+    }
+    else {
+        compScore++
+        compScoreTxt.innerText = compScore
+        msg.innerText = `You Lost! ${compChoice} beats Your ${userChoice}`
+        msg.style.backgroundColor = "#A4031F"
+    }
+}
