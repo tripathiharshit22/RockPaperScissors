@@ -28,6 +28,7 @@ const resetGame = () => {
     compScore = 0
 
 }
+
 const showWinner = (userWin, userChoice, compChoice) => {
     if (userWin) {
         userScore++
@@ -42,3 +43,44 @@ const showWinner = (userWin, userChoice, compChoice) => {
         msg.style.backgroundColor = "#A4031F"
     }
 }
+
+const playGame = (userChoice) => {
+    //Generate Computer Choice
+    const compChoice = genCompChoice()
+    if (userChoice === compChoice) {
+        //Game Draw
+        drawGame()
+    }
+    else {
+        let userWin = true
+        if (userChoice === "Rock") {
+
+            //Paper, Scissors
+            userWin = compChoice === "Paper" ? false : true
+            //userChoice= Rock , if compChoice= Paper too false ? if compChoice= Scissors too true
+        }
+        else if (userChoice === "Paper") {
+
+            //Rock, Scissors
+            userWin = compChoice === "Scissors" ? false : true
+        }
+        else {//userChoice==="Scissors"
+
+            //Rock ,Paper
+            userWin = compChoice === "Rock" ? false : true
+        }
+        showWinner(userWin, userChoice, compChoice)
+    }
+}
+
+
+choices.forEach((choice) => {
+    const userChoice = choice.getAttribute("id")
+    choice.addEventListener("click", () => {
+        playGame(userChoice)
+
+    })
+
+});
+
+resetBtn.addEventListener("click", resetGame)
